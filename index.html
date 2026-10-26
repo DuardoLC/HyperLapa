@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hyper Lapa | Funcional, dança e performance</title>
 <meta name="description" content="Hyper Lapa: funcional fitness, dança, treinamento funcional e atendimento personal em Lapa-PR.">
-<link rel="icon" id="fav" type="image/jpeg" href="logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --preto: #050505; 
@@ -33,20 +32,21 @@ a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 3px solid var(--brasa); outline-offset: 3px; }
 
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: .95; letter-spacing: .01em; }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: .95; letter-spacing: .01em; }
 h2 { font-size: clamp(2.4rem, 6vw, 4.2rem); margin-bottom: 20px; }
 section { padding: 104px 0; }
 .lead { color: var(--suave); max-width: 60ch; }
 
-/* Cabeçalho */
+/* Cabeçalho & Logo */
 header { 
   position: fixed; inset: 0 0 auto 0; z-index: 20; 
-  background: rgba(5,5,5,.92); backdrop-filter: blur(8px); 
+  background: rgba(5,5,5,.95); backdrop-filter: blur(8px); 
   border-bottom: 1px solid var(--linha); 
 }
 header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.marca img { max-height: 60px; width: auto; display: block; object-fit: contain; }
-nav { display: flex; gap: 28px; font-weight: 500; font-size: .95rem; }
+.marca { font-family: var(--display); font-weight: 800; font-size: 2.2rem; letter-spacing: .02em; color: var(--texto); }
+.marca b { color: var(--laranja); }
+nav { display: flex; gap: 28px; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
 nav a { color: var(--suave); padding: 6px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
 nav a:hover, nav a.ativo { color: var(--texto); border-color: var(--laranja); }
 nav a.ferr { color: var(--brasa); }
@@ -54,7 +54,7 @@ nav a.ferr { color: var(--brasa); }
 /* Botões */
 .btn { 
   display: inline-flex; align-items: center; justify-content: center; gap: 10px; 
-  background: var(--laranja); color: #fff; font-weight: 600; 
+  background: var(--laranja); color: #fff; font-weight: 700; text-transform: uppercase;
   padding: 14px 26px; border-radius: 6px; border: 0; 
   cursor: pointer; font-size: 1rem; font-family: var(--corpo); 
   transition: background .2s, transform .2s; 
@@ -75,7 +75,7 @@ nav a.ferr { color: var(--brasa); }
 h1 { font-size: clamp(3.6rem, 10vw, 8rem); text-transform: uppercase; max-width: 1000px; }
 h1 span { display: block; }
 h1 .contorno { color: transparent; -webkit-text-stroke: 2px var(--laranja); }
-#inicio p { margin: 28px 0 36px; font-size: 1.25rem; color: var(--suave); max-width: 50ch; }
+#inicio p { margin: 28px 0 36px; font-size: 1.25rem; color: var(--suave); max-width: 55ch; }
 .acoes { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* Seção: O Espaço */
@@ -103,22 +103,14 @@ h1 .contorno { color: transparent; -webkit-text-stroke: 2px var(--laranja); }
 .painel h3 { font-size: 2.8rem; margin-bottom: 16px; }
 .painel p { color: var(--suave); max-width: 52ch; margin-bottom: 24px; }
 .painel ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
-.painel li { border: 1px solid var(--linha); border-radius: 100px; padding: 6px 16px; font-size: .95rem; }
+.painel li { border: 1px solid var(--linha); border-radius: 100px; padding: 6px 16px; font-size: .95rem; font-weight: 600;}
 
-/* Seção: Diferenciais */
+/* Diferenciais & Contato */
 #diferenciais { background: var(--grafite); border-block: 1px solid var(--linha); }
 .dif { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 48px; }
 .passos { display: grid; gap: 28px; }
 .passos h3 { font-size: 1.9rem; margin-bottom: 6px; color: var(--brasa); }
 .passos p { color: var(--suave); }
-.grafico { background: var(--preto); border: 1px solid var(--linha); border-radius: 6px; padding: 28px; }
-.grafico h3 { font-size: 1.6rem; margin-bottom: 4px; }
-.grafico small { color: var(--suave); display: block; margin-bottom: 18px; font-size: .85rem; }
-.grafico svg { width: 100%; height: auto; display: block; }
-.legenda { display: flex; gap: 22px; margin-top: 14px; font-size: .9rem; color: var(--suave); }
-.legenda i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 8px; vertical-align: -1px; }
-
-/* Contato & Footer */
 footer { padding: 104px 0 40px; }
 .contato { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
 .contato dl { margin-top: 32px; display: grid; gap: 22px; }
@@ -143,38 +135,57 @@ footer { padding: 104px 0 40px; }
   padding: 48px 20px; text-align: center; transition: background .3s; 
   display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.visor { font-family: var(--display); font-weight: 800; font-size: clamp(6rem, 22vw, 15rem); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.visor { font-family: var(--display); font-weight: 800; font-size: clamp(6rem, 22vw, 16rem); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 .ctrl { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px; width: 100%; max-width: 600px; }
 .ctrl .btn { flex: 1; min-width: 140px; font-size: 1.2rem; padding: 18px; }
 .palco .fase { font-family: var(--display); font-weight: 700; font-size: 2.5rem; min-height: 1.2em; text-transform: uppercase; letter-spacing: 2px; color: var(--suave); }
-.palco .info { opacity: .85; min-height: 1.7em; font-size: 1.2rem; margin-top: 8px; color: var(--brasa); font-weight: 600; }
-.logo-palco { height: 80px; width: auto; display: block; margin: 0 auto 24px; opacity: 0.5; transition: opacity .3s; }
+.palco .info { opacity: .85; min-height: 1.7em; font-size: 1.5rem; margin-top: 8px; color: var(--brasa); font-weight: 600; font-family: var(--display); letter-spacing: 1px;}
+.marca-palco { font-family: var(--display); font-weight: 800; font-size: 2.5rem; letter-spacing: .02em; color: rgba(255,255,255,0.2); margin-bottom: 24px; transition: color .3s; }
+.marca-palco b { color: rgba(255, 90, 31, 0.4); }
 
 /* Cores dos Estados do Timer */
-.palco[data-fase="preparar"] { background: #004d40; }
-.palco[data-fase="trabalho"] { background: #b71c1c; color: #fff; }
-.palco[data-fase="descanso"] { background: #01579b; }
+.palco[data-fase="preparar"] { background: #5d4037; } /* Marrom */
+.palco[data-fase="trabalho"] { background: #d84315; color: #fff; } /* Laranja escuro / Vermelho */
+.palco[data-fase="descanso"] { background: #2e7d32; } /* Verde escuro */
 .palco[data-fase="fim"] { background: #111; }
 .palco[data-fase="preparar"] .fase, .palco[data-fase="trabalho"] .fase, .palco[data-fase="descanso"] .fase { color: #fff; }
-.palco:not([data-fase="parado"]):not([data-fase="fim"]) .logo-palco { opacity: 1; }
+.palco:not([data-fase="parado"]):not([data-fase="fim"]) .marca-palco { color: rgba(255,255,255,0.7); }
+.palco:not([data-fase="parado"]):not([data-fase="fim"]) .marca-palco b { color: #fff; }
 
 /* Tela cheia */
 .palco:fullscreen { display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 0; border: 0; padding: 5vh; }
 .palco:fullscreen .visor { font-size: min(35vw, 60vh); }
 .palco:fullscreen .fase { font-size: min(6vw, 8vh); }
-.palco:fullscreen .ctrl { display: none; } /* Oculta botões em tela cheia (usa barra de espaço) */
+.palco:fullscreen .ctrl { display: none; } 
 
 /* Ajustes dos Cronômetros (Painel de Configuração) */
-.ajustes { 
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; 
-  margin-top: 24px; background: var(--grafite); padding: 24px; border-radius: 8px; border: 1px solid var(--linha);
-}
+.ajustes { margin-top: 24px; }
+.ajustes-global { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; background: var(--grafite); padding: 24px; border-radius: 8px; border: 1px solid var(--linha); }
 .campo label { display: block; color: var(--texto); font-weight: 600; font-size: 1rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Input Customizado para Timer */
 .passo { display: flex; border: 2px solid var(--linha); border-radius: 6px; overflow: hidden; background: var(--preto); height: 50px; }
 .passo button { background: var(--grafite-2); color: var(--texto); border: 0; width: 50px; font-size: 1.6rem; cursor: pointer; transition: background .2s; }
 .passo button:hover { background: var(--laranja); color: #fff; }
-.passo output { flex: 1; display: grid; place-items: center; font-weight: 700; font-size: 1.2rem; font-variant-numeric: tabular-nums; }
-.som { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; color: var(--suave); cursor: pointer; font-weight: 500; }
+.passo input { 
+  flex: 1; background: transparent; border: none; color: var(--texto); 
+  text-align: center; font-weight: 700; font-size: 1.4rem; font-variant-numeric: tabular-nums; 
+  font-family: var(--corpo); outline: none; width: 100%;
+}
+.passo input::-webkit-outer-spin-button, .passo input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.passo input[type=number] { -moz-appearance: textfield; }
+.passo input:focus { background: rgba(255, 90, 31, 0.1); }
+
+/* Blocos de Tabata */
+.tabata-blocks-container { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.tabata-block { background: var(--grafite); padding: 24px; border-radius: 8px; border: 1px solid var(--linha); position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; align-items: end;}
+.tabata-block-title { position: absolute; top: -12px; left: 16px; background: var(--laranja); color: white; padding: 2px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; font-family: var(--display); letter-spacing: 1px;}
+.btn-remove-block { background: transparent; border: 1px solid #ff4444; color: #ff4444; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: 700; transition: all 0.2s; height: 50px;}
+.btn-remove-block:hover { background: #ff4444; color: white; }
+.add-tabata-btn { width: 100%; margin-top: 16px; background: var(--grafite-2); color: var(--texto); border: 2px dashed var(--linha); padding: 16px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px;}
+.add-tabata-btn:hover { border-color: var(--laranja); color: var(--laranja); background: var(--preto); }
+
+.som { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 24px; color: var(--suave); cursor: pointer; font-weight: 500; }
 .som input { width: 18px; height: 18px; accent-color: var(--laranja); cursor: pointer; }
 
 /* Estilo específico do Relógio Digital */
@@ -183,21 +194,14 @@ footer { padding: 104px 0 40px; }
   padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; 
   justify-content: center; min-height: 60vh;
 }
-.relogio-digital-palco .visor { font-size: clamp(6rem, 20vw, 18rem); color: var(--laranja); text-shadow: 0 0 40px rgba(255, 90, 31, 0.2); }
-.relogio-digital-palco .data-atual { font-size: 2rem; color: var(--suave); font-weight: 500; margin-top: 20px; text-transform: uppercase; letter-spacing: 2px; }
+.relogio-digital-palco .visor { font-size: clamp(5rem, 18vw, 16rem); color: var(--laranja); text-shadow: 0 0 40px rgba(255, 90, 31, 0.2); }
+.relogio-digital-palco .data-atual { font-size: clamp(1.2rem, 4vw, 2.5rem); color: var(--suave); font-weight: 600; margin-top: 20px; text-transform: uppercase; letter-spacing: 2px; font-family: var(--display);}
 .relogio-digital-palco:fullscreen { border: 0; border-radius: 0; padding: 0; }
-.relogio-digital-palco:fullscreen .visor { font-size: 28vw; }
+.relogio-digital-palco:fullscreen .visor { font-size: 24vw; }
 
 body:not([data-v="site"]) .zap-fixo { display: none !important; }
 
-/* Animações e Responsividade */
-@media (prefers-reduced-motion: no-preference) {
-  h1 span { animation: sobe .7s cubic-bezier(.2,.7,.2,1) both; }
-  h1 span:nth-child(2) { animation-delay: .12s; }
-  h1 span:nth-child(3) { animation-delay: .24s; }
-  @keyframes sobe { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-}
-
+/* Responsividade */
 @media (max-width: 860px) {
   section { padding: 72px 0; }
   header .wrap { flex-wrap: wrap; height: auto; min-height: 56px; padding-top: 8px; }
@@ -218,8 +222,7 @@ body:not([data-v="site"]) .zap-fixo { display: none !important; }
 <header>
   <div class="wrap">
     <a class="marca" href="#inicio" aria-label="Hyper Lapa, início">
-      <!-- Logo específica exigida -->
-      <img src="logo.jpeg" alt="Hyper Lapa Logo">
+      HYPER <b>LAPA</b>
     </a>
     <nav aria-label="Seções">
       <a href="#inicio">Início</a>
@@ -227,7 +230,6 @@ body:not([data-v="site"]) .zap-fixo { display: none !important; }
       <a href="#modalidades">Modalidades</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#contato">Contato</a>
-      <!-- Menu apenas com as duas ferramentas requeridas -->
       <a class="ferr" href="#/relogio">Relógio de Treino</a>
       <a class="ferr" href="#/digital">Relógio Digital</a>
     </nav>
@@ -241,7 +243,6 @@ body:not([data-v="site"]) .zap-fixo { display: none !important; }
     <!-- Início / Hero -->
     <section id="inicio">
       <div class="wrap">
-        <!-- Título forte, sem cronômetro circular e sem o texto de rodada por minuto -->
         <h1><span>Treine forte.</span><span class="contorno">Evolua de verdade.</span><span>Sem atalhos.</span></h1>
         <p>Funcional fitness, dança, treinamento funcional e atendimento personal em uma estrutura feita para quem quer superar o treino de ontem.</p>
         <div class="acoes">
@@ -344,31 +345,27 @@ body:not([data-v="site"]) .zap-fixo { display: none !important; }
   </footer>
 </div>
 
-<!-- VISTA 2: RELÓGIO DE TREINO (MODOS AVANÇADOS) -->
+<!-- VISTA 2: RELÓGIO DE TREINO -->
 <div class="vista" id="view-clock" hidden>
   <div class="wrap">
     <h2>Relógio de Treino</h2>
-    <p class="lead">Selecione a modalidade, configure seus tempos e projete na tela. <strong>Dica:</strong> Use a barra de espaço para iniciar/pausar.</p>
-    <div id="c-timer"></div>
-    <div style="text-align: center;">
-      <label class="som"><input type="checkbox" checked> Emitir avisos sonoros (Bipes)</label>
-    </div>
+    <p class="lead">Configure seus tempos, adicione múltiplos Tabatas se desejar, e projete na tela. <strong>Dica:</strong> Use a barra de espaço para iniciar/pausar.</p>
+    <div id="c-timer-container"></div>
+    <label class="som"><input type="checkbox" id="som-toggle" checked> Habilitar alertas sonoros (3, 2, 1...)</label>
   </div>
 </div>
 
-<!-- VISTA 3: RELÓGIO DIGITAL (HORA DE BRASÍLIA) -->
+<!-- VISTA 3: RELÓGIO DIGITAL -->
 <div class="vista" id="view-digital" hidden>
   <div class="wrap">
     <h2>Relógio Digital</h2>
-    <p class="lead">Horário oficial de Brasília. Perfeito para projetar na TV durante o aquecimento ou ao longo do dia.</p>
-    
+    <p class="lead">Horário oficial de Brasília. Perfeito para projetar na TV durante o aquecimento ou recepção.</p>
     <div class="relogio-digital-palco" id="digital-container">
-      <!-- Exibição da logo também no palco do relógio -->
-      <img class="logo-palco" src="logo.jpeg" alt="Hyper Lapa">
+      <div class="marca-palco">HYPER <b>LAPA</b></div>
       <div class="visor" id="digital-visor">00:00:00</div>
-      <div class="data-atual" id="digital-data">SEGUNDA-FEIRA, 1 DE JANEIRO</div>
+      <div class="data-atual" id="digital-data">--</div>
       <div class="ctrl" style="margin-top: 40px;">
-        <button class="btn vazado bf-digital">Tela Cheia</button>
+        <button class="btn vazado bf-digital">TELA CHEIA</button>
       </div>
     </div>
   </div>
@@ -380,13 +377,10 @@ body:not([data-v="site"]) .zap-fixo { display: none !important; }
 // ==========================================
 // Configurações do WhatsApp
 // ==========================================
-const WHATSAPP = "5541996906169"; // código do país + DDD + número
+const WHATSAPP = "5541996906169"; 
 const MENSAGEM = "Olá! Quero agendar uma aula experimental na Hyper Lapa.";
-
-const link = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAGEM);
-document.querySelectorAll(".js-zap").forEach(a => a.href = link);
+document.querySelectorAll(".js-zap").forEach(a => a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAGEM));
 document.getElementById("ano").textContent = new Date().getFullYear();
-
 
 // ==========================================
 // Lógica das Modalidades
@@ -394,8 +388,8 @@ document.getElementById("ano").textContent = new Date().getFullYear();
 const MOD = [
   {
     t: "Funcional Fitness", 
-    d: "Inspirado na essência do CrossFit, o Funcional Fitness combina levantamento de peso olímpico, ginástica e condicionamento metabólico em treinos de alta intensidade constantemente variados. Prepare-se para superar seus limites a cada WOD.", 
-    g: ["LPO", "Ginástica", "WODs", "Alta Intensidade"]
+    d: "A verdadeira essência do CrossFit adaptada para você: treinos de alta intensidade constantemente variados. Combinamos ginástica, levantamento de peso olímpico (LPO) e condicionamento metabólico para construir um corpo forte, rápido e resistente a qualquer desafio.", 
+    g: ["Alta Intensidade", "LPO", "Ginástica", "Condicionamento Metabólico", "WODs Desafiadores"]
   },
   {
     t: "Dança", 
@@ -435,7 +429,7 @@ const obs = new IntersectionObserver(es => es.forEach(e => {
 document.querySelectorAll("section[id], footer[id]").forEach(s => obs.observe(s));
 
 // ==========================================
-// Roteamento SPA (Navegação via Hash)
+// Roteamento SPA
 // ==========================================
 const vistas = { site: "view-site", rel: "view-clock", dig: "view-digital" };
 const resets = [];
@@ -447,7 +441,6 @@ function rota() {
   const mudou = v !== atual;
   
   if (mudou) resets.forEach(f => f());
-  
   atual = v; 
   document.body.dataset.v = v;
   
@@ -466,33 +459,25 @@ function rota() {
 addEventListener("hashchange", rota);
 
 // ==========================================
-// Som e Utilitários (Bipes)
+// Som e Bipes
 // ==========================================
 const AC = window.AudioContext || window.webkitAudioContext; 
 let ac, SOM = true;
-const pad = n => String(n).padStart(2, "0");
+document.getElementById('som-toggle').addEventListener('change', e => { SOM = e.target.checked; });
 
 function beep(f, d) {
   if (!SOM || !AC) return;
   try {
-    ac = ac || new AC(); ac.resume();
+    ac = ac || new AC(); if(ac.state === 'suspended') ac.resume();
     const o = ac.createOscillator(), g = ac.createGain(), t = ac.currentTime;
-    o.frequency.value = f; 
-    o.connect(g); 
-    g.connect(ac.destination);
-    g.gain.setValueAtTime(.25, t); 
-    g.gain.exponentialRampToValueAtTime(.001, t + d); 
-    o.start(t); 
-    o.stop(t + d);
+    o.frequency.value = f; o.connect(g); g.connect(ac.destination);
+    g.gain.setValueAtTime(.25, t); g.gain.exponentialRampToValueAtTime(.001, t + d); 
+    o.start(t); o.stop(t + d);
   } catch (e) {}
 }
 
-document.querySelectorAll(".som input").forEach(i => i.onchange = () => {
-  SOM = i.checked; 
-});
-
 // ==========================================
-// Motor de Timer por Segmentos (Tabata, EMOM, etc)
+// Motor de Timer de Segmentos
 // ==========================================
 function runner(draw){
   let segs = [], acc = 0, t0 = 0, on = false, id = 0, key = "", ini = false;
@@ -504,14 +489,14 @@ function runner(draw){
     for(; i < segs.length; i++) { if (e < s + segs[i].s) break; s += segs[i].s; }
     
     if (i === segs.length) {
-      stop(); acc = 0; ini = false; beep(660, .7); draw({fim: 1}); return;
+      stop(); acc = 0; ini = false; beep(660, .8); draw({fim: 1}); return;
     }
     
     const g = segs[i], into = e - s, left = g.s - into, k = i + ":" + Math.ceil(left);
     if (k !== key) {
       key = k; 
-      if (into < .5 && i > 0) beep(1000, .4); 
-      else if (left <= 3 && g.c !== 0) beep(700, .1);
+      if (into < .5 && i > 0) beep(1000, .4); // Bipe de início de novo round/segmento
+      else if (left <= 3.05 && g.c !== 0) beep(700, .1); // Contagem regressiva 3, 2, 1
     }
     draw({g, into, left});
   }
@@ -524,7 +509,8 @@ function runner(draw){
     toggle() {
       if (on) { acc = el(); stop(); return; }
       if (!segs.length) return;
-      beep(20, .01); t0 = performance.now(); on = true; ini = true; 
+      beep(20, .01); // Inicia áudio
+      t0 = performance.now(); on = true; ini = true; 
       id = setInterval(tick, 100); tick();
       if (navigator.wakeLock) navigator.wakeLock.request("screen").catch(() => {});
     },
@@ -532,114 +518,213 @@ function runner(draw){
   };
 }
 
-const PREP = ["prep", "Preparação (s)", 10, 0, 60, 5];
-const pr = c => c.prep ? [{t: "Preparação", f: "preparar", s: c.prep}] : [];
+// ==========================================
+// Estado e Gerenciamento do Relógio de Treino
+// ==========================================
+const pad = n => String(n).padStart(2, "0");
+const fmt = (s, up) => { s = Math.max(0, up ? Math.floor(s) : Math.ceil(s)); return pad(Math.floor(s / 60)) + ":" + pad(s % 60); };
 
-// Configuração dos modos do relógio
-const MODOS = {
-  tabata: {
-    n: "Tabata", 
-    c: [PREP, ["work", "Trabalho (s)", 20, 5, 300, 5], ["rest", "Descanso (s)", 10, 0, 300, 5], ["rounds", "Rodadas", 8, 1, 50, 1]],
-    seg(c) {
-      const s = pr(c);
-      for(let r = 1; r <= c.rounds; r++) {
-        s.push({t: "Trabalho", f: "trabalho", s: c.work, r, R: c.rounds});
-        if (r < c.rounds && c.rest) s.push({t: "Descanso", f: "descanso", s: c.rest, r, R: c.rounds});
-      }
-      return s;
-    }
-  },
-  emom: {
-    n: "EMOM", 
-    c: [PREP, ["int", "Intervalo (s)", 60, 10, 600, 10], ["rounds", "Rodadas", 10, 1, 99, 1]],
-    seg(c) {
-      const s = pr(c);
-      for(let r = 1; r <= c.rounds; r++) s.push({t: "EMOM", f: "trabalho", s: c.int, r, R: c.rounds});
-      return s;
-    }
-  },
-  fortime: {
-    n: "For Time", 
-    c: [PREP, ["cap", "Time cap (min)", 15, 1, 120, 1]], 
-    seg: c => [...pr(c), {t: "For Time", f: "trabalho", s: c.cap * 60, up: 1, c: 0}]
-  },
-  amrap: {
-    n: "AMRAP", 
-    c: [PREP, ["min", "Duração (min)", 12, 1, 120, 1]], 
-    seg: c => [...pr(c), {t: "AMRAP", f: "trabalho", s: c.min * 60}]
-  }
+const MODES_DEF = [
+  { id: 'tabata', name: 'Tabata' },
+  { id: 'emom', name: 'EMOM' },
+  { id: 'amrap', name: 'AMRAP' },
+  { id: 'fortime', name: 'For Time' }
+];
+
+let currentMode = 'tabata';
+const timerState = {
+  prep: 10,
+  tabata: { blocks: [ { work: 20, rest: 10, rounds: 8 } ] },
+  emom: { int: 60, rounds: 10 },
+  amrap: { min: 12 },
+  fortime: { cap: 15 }
 };
 
-// ==========================================
-// Interface do Relógio de Treino
-// ==========================================
-function criarTimer(root, lista) {
-  root.innerHTML = (lista.length > 1 ? '<div class="subabas" role="tablist"></div>' : '') +
-    '<div class="palco" data-fase="parado"><img class="logo-palco" src="logo.jpeg" alt="Hyper Lapa">' +
-    '<div class="fase">Pronto</div><div class="visor">00:00</div><div class="info"></div>' +
-    '<div class="ctrl"><button class="btn bi">INICIAR</button><button class="btn vazado bz">ZERAR</button>' + 
-    '<button class="btn vazado bf">TELA CHEIA</button></div></div><div class="ajustes"></div>';
-    
-  const $ = q => root.querySelector(q);
-  const palco = $(".palco"), fase = $(".fase"), visor = $(".visor"), info = $(".info"), 
-        bi = $(".bi"), aj = $(".ajustes"), tabs = $(".subabas");
-        
-  let modo = lista[0]; 
-  const vals = {};
+// Gera a lista de segmentos lineares a partir do estado atual
+function generateSegments() {
+  let segs = [];
+  if (timerState.prep > 0) {
+    segs.push({t: "PREPARAÇÃO", f: "preparar", s: timerState.prep});
+  }
   
-  const fmt = (s, up) => { s = Math.max(0, up ? Math.floor(s) : Math.ceil(s)); return pad(Math.floor(s / 60)) + ":" + pad(s % 60); };
-  const lbl = () => { bi.textContent = rn.on() ? "PAUSAR" : rn.started() ? "RETOMAR" : "INICIAR"; };
-  
-  function draw(st) {
-    if (st.g) {
-      const g = st.g; palco.dataset.fase = g.f; fase.textContent = g.t; 
-      visor.textContent = fmt(g.up ? st.into : st.left, g.up); 
-      info.textContent = g.r ? "Round " + g.r + " de " + g.R : "";
-    } else {
-      palco.dataset.fase = st.fim ? "fim" : "parado"; 
-      fase.textContent = st.fim ? "Treino Concluído" : "Pronto"; 
-      visor.textContent = !st.fim && st.first && !st.first.up ? fmt(st.first.s) : "00:00"; 
-      info.textContent = "";
+  if (currentMode === 'tabata') {
+    timerState.tabata.blocks.forEach((b, idx) => {
+      let titlePrefix = timerState.tabata.blocks.length > 1 ? `TABATA ${idx+1} - ` : '';
+      for (let r = 1; r <= b.rounds; r++) {
+        segs.push({t: titlePrefix + "TRABALHO", f: "trabalho", s: b.work, r: r, R: b.rounds});
+        if (r < b.rounds && b.rest > 0) {
+          segs.push({t: titlePrefix + "DESCANSO", f: "descanso", s: b.rest, r: r, R: b.rounds});
+        }
+      }
+    });
+  } 
+  else if (currentMode === 'emom') {
+    let m = timerState.emom;
+    for(let r = 1; r <= m.rounds; r++) {
+      segs.push({t: "EMOM", f: "trabalho", s: m.int, r: r, R: m.rounds});
     }
-    lbl();
   }
-  
-  const rn = runner(draw); resets.push(() => rn.reset());
-  
-  function montar() {
-    const M = MODOS[modo]; 
-    vals[modo] = vals[modo] || Object.fromEntries(M.c.map(c => [c[0], c[2]]));
-    aj.innerHTML = M.c.map(c => '<div class="campo"><label>'+c[1]+'</label><div class="passo" data-k="'+c[0]+'"><button type="button" aria-label="Diminuir">−</button><output>'+vals[modo][c[0]]+'</output><button type="button" aria-label="Aumentar">+</button></div></div>').join("");
-    rn.set(M.seg(vals[modo]));
+  else if (currentMode === 'amrap') {
+    segs.push({t: "AMRAP", f: "trabalho", s: timerState.amrap.min * 60});
   }
-  
-  aj.onclick = e => {
-    const b = e.target.closest("button"); if(!b) return;
-    const p = b.parentNode, c = MODOS[modo].c.find(x => x[0] === p.dataset.k), d = b === p.firstElementChild ? -c[5] : c[5];
-    vals[modo][c[0]] = Math.min(c[4], Math.max(c[3], vals[modo][c[0]] + d));
-    p.querySelector("output").textContent = vals[modo][c[0]];
-    rn.set(MODOS[modo].seg(vals[modo]));
-  };
-  
-  if (tabs) {
-    tabs.innerHTML = lista.map(m => '<button role="tab" aria-selected="'+(m === modo)+'" data-m="'+m+'">'+MODOS[m].n+'</button>').join("");
-    tabs.onclick = e => {
-      const b = e.target.closest("button"); if(!b) return;
-      if (rn.on()) { rn.toggle(); lbl(); } // Pausa ao mudar de aba
-      modo = b.dataset.m; 
-      tabs.querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", x === b)); 
-      montar();
-    };
+  else if (currentMode === 'fortime') {
+    segs.push({t: "FOR TIME", f: "trabalho", s: timerState.fortime.cap * 60, up: 1});
   }
-  
-  bi.onclick = () => { rn.toggle(); lbl(); };
-  $(".bz").onclick = () => rn.reset();
-  $(".bf").onclick = () => document.fullscreenElement ? document.exitFullscreen() : (palco.requestFullscreen && palco.requestFullscreen());
-  
-  montar();
+  return segs;
 }
 
-criarTimer(document.getElementById("c-timer"), ["tabata", "emom", "amrap", "fortime"]);
+// ==========================================
+// Renderização do Timer
+// ==========================================
+const timerRoot = document.getElementById("c-timer-container");
+timerRoot.innerHTML = `
+  <div class="subabas" role="tablist">
+    ${MODES_DEF.map(m => `<button role="tab" data-mode="${m.id}">${m.name}</button>`).join('')}
+  </div>
+  <div class="palco" data-fase="parado">
+    <div class="marca-palco">HYPER <b>LAPA</b></div>
+    <div class="fase">Pronto</div><div class="visor">00:00</div><div class="info"></div>
+    <div class="ctrl">
+      <button class="btn bi">INICIAR</button>
+      <button class="btn vazado bz">ZERAR</button>
+      <button class="btn vazado bf">TELA CHEIA</button>
+    </div>
+  </div>
+  <div class="ajustes" id="timer-ajustes"></div>
+`;
+
+const palco = timerRoot.querySelector(".palco"), fase = timerRoot.querySelector(".fase"), 
+      visor = timerRoot.querySelector(".visor"), info = timerRoot.querySelector(".info"), 
+      btnIniciar = timerRoot.querySelector(".bi"), btnZerar = timerRoot.querySelector(".bz"),
+      btnFull = timerRoot.querySelector(".bf"), ajustesCont = document.getElementById("timer-ajustes");
+
+const updateLbl = () => { btnIniciar.textContent = engine.on() ? "PAUSAR" : engine.started() ? "RETOMAR" : "INICIAR"; };
+
+const engine = runner(st => {
+  if (st.g) {
+    palco.dataset.fase = st.g.f; fase.textContent = st.g.t; 
+    visor.textContent = fmt(st.g.up ? st.into : st.left, st.g.up); 
+    info.textContent = st.g.r ? "Round " + st.g.r + " de " + st.g.R : "";
+  } else {
+    palco.dataset.fase = st.fim ? "fim" : "parado"; 
+    fase.textContent = st.fim ? "TREINO CONCLUÍDO" : "PRONTO"; 
+    visor.textContent = !st.fim && st.first && !st.first.up ? fmt(st.first.s) : "00:00"; 
+    info.textContent = "";
+  }
+  updateLbl();
+});
+resets.push(() => engine.reset());
+
+// Atualiza botões de aba
+function updateTabs() {
+  timerRoot.querySelectorAll(".subabas button").forEach(b => {
+    b.setAttribute("aria-selected", b.dataset.mode === currentMode);
+  });
+}
+
+function renderInput(label, val, key, min=0, max=999, step=1, idx=null) {
+  let dataAttr = `data-key="${key}"` + (idx !== null ? ` data-idx="${idx}"` : '');
+  return `
+    <div class="campo">
+      <label>${label}</label>
+      <div class="passo">
+        <button type="button" class="btn-minus" ${dataAttr}>−</button>
+        <input type="number" value="${val}" min="${min}" max="${max}" step="${step}" ${dataAttr}>
+        <button type="button" class="btn-plus" ${dataAttr}>+</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderAjustes() {
+  let html = `<div class="ajustes-global">`;
+  html += renderInput("Preparação (s)", timerState.prep, "prep", 0, 120, 5);
+  
+  if (currentMode === 'emom') {
+    html += renderInput("Intervalo (s)", timerState.emom.int, "int", 10, 600, 10);
+    html += renderInput("Rodadas", timerState.emom.rounds, "rounds", 1, 99, 1);
+    html += `</div>`;
+  } else if (currentMode === 'amrap') {
+    html += renderInput("Duração (min)", timerState.amrap.min, "min", 1, 120, 1);
+    html += `</div>`;
+  } else if (currentMode === 'fortime') {
+    html += renderInput("Time Cap (min)", timerState.fortime.cap, "cap", 1, 120, 1);
+    html += `</div>`;
+  } else if (currentMode === 'tabata') {
+    html += `</div>`; // Fechar globais
+    html += `<div class="tabata-blocks-container">`;
+    timerState.tabata.blocks.forEach((b, i) => {
+      html += `
+        <div class="tabata-block">
+          <div class="tabata-block-title">TABATA ${i+1}</div>
+          ${renderInput("Trabalho (s)", b.work, "work", 5, 300, 5, i)}
+          ${renderInput("Descanso (s)", b.rest, "rest", 0, 300, 5, i)}
+          ${renderInput("Rodadas", b.rounds, "rounds", 1, 50, 1, i)}
+          ${timerState.tabata.blocks.length > 1 ? `<button type="button" class="btn-remove-block" data-idx="${i}">REMOVER</button>` : ''}
+        </div>
+      `;
+    });
+    html += `<button type="button" class="add-tabata-btn">+ Adicionar Tabata</button></div>`;
+  }
+  
+  ajustesCont.innerHTML = html;
+  engine.set(generateSegments());
+}
+
+function updateStateValue(key, idx, newVal) {
+  if (key === 'prep') timerState.prep = newVal;
+  else if (currentMode === 'tabata') timerState.tabata.blocks[idx][key] = newVal;
+  else timerState[currentMode][key] = newVal;
+  renderAjustes();
+}
+
+// Eventos do Painel de Ajustes
+ajustesCont.addEventListener('click', e => {
+  if (engine.on()) { engine.toggle(); updateLbl(); } // Pausa se tiver mexendo
+  
+  if (e.target.classList.contains('add-tabata-btn')) {
+    timerState.tabata.blocks.push({ work: 20, rest: 10, rounds: 8 });
+    renderAjustes();
+  } else if (e.target.classList.contains('btn-remove-block')) {
+    timerState.tabata.blocks.splice(parseInt(e.target.dataset.idx), 1);
+    renderAjustes();
+  } else if (e.target.classList.contains('btn-minus') || e.target.classList.contains('btn-plus')) {
+    const input = e.target.parentElement.querySelector('input');
+    let val = parseInt(input.value) || 0;
+    let step = parseInt(input.step) || 1;
+    if (e.target.classList.contains('btn-minus')) val -= step;
+    else val += step;
+    val = Math.max(input.min, Math.min(input.max, val));
+    updateStateValue(input.dataset.key, input.dataset.idx, val);
+  }
+});
+
+ajustesCont.addEventListener('change', e => {
+  if (e.target.tagName === 'INPUT' && e.target.type === 'number') {
+    if (engine.on()) { engine.toggle(); updateLbl(); }
+    let val = parseInt(e.target.value) || 0;
+    val = Math.max(e.target.min, Math.min(e.target.max, val));
+    e.target.value = val;
+    updateStateValue(e.target.dataset.key, e.target.dataset.idx, val);
+  }
+});
+
+timerRoot.querySelector(".subabas").addEventListener("click", e => {
+  if(e.target.tagName === 'BUTTON') {
+    if(engine.on()) { engine.toggle(); updateLbl(); }
+    currentMode = e.target.dataset.mode;
+    updateTabs();
+    renderAjustes();
+  }
+});
+
+btnIniciar.onclick = () => { engine.toggle(); updateLbl(); };
+btnZerar.onclick = () => engine.reset();
+btnFull.onclick = () => document.fullscreenElement ? document.exitFullscreen() : (palco.requestFullscreen && palco.requestFullscreen());
+
+// Inicializa a view do timer
+updateTabs();
+renderAjustes();
 
 // ==========================================
 // Relógio Digital (Hora de Brasília)
@@ -650,40 +735,29 @@ const containerDigital = document.getElementById("digital-container");
 
 function atualizarRelogioDigital() {
   const agora = new Date();
+  const optHora = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+  digitalVisor.textContent = agora.toLocaleTimeString('pt-BR', optHora);
   
-  // Hora de Brasília
-  const optionsHora = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-  digitalVisor.textContent = agora.toLocaleTimeString('pt-BR', optionsHora);
-  
-  // Data
-  const optionsData = { timeZone: 'America/Sao_Paulo', weekday: 'long', day: 'numeric', month: 'long' };
-  let strData = agora.toLocaleDateString('pt-BR', optionsData);
-  digitalData.textContent = strData.toUpperCase();
+  const optData = { timeZone: 'America/Sao_Paulo', weekday: 'long', day: 'numeric', month: 'long' };
+  digitalData.textContent = agora.toLocaleDateString('pt-BR', optData).toUpperCase();
 }
-
 setInterval(atualizarRelogioDigital, 1000);
 atualizarRelogioDigital();
 
 document.querySelector(".bf-digital").onclick = () => {
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    containerDigital.requestFullscreen && containerDigital.requestFullscreen();
-  }
+  if (document.fullscreenElement) document.exitFullscreen();
+  else containerDigital.requestFullscreen && containerDigital.requestFullscreen();
 };
 
 // ==========================================
-// Atalho Teclado (Barra de Espaço)
+// Atalhos
 // ==========================================
 addEventListener("keydown", e => {
-  if (e.code === "Space" && atual === "rel" && e.target === document.body) {
+  if (e.code === "Space" && atual === "rel" && e.target.tagName !== "INPUT") {
     e.preventDefault(); 
-    document.querySelector("#c-timer .bi").click();
+    btnIniciar.click();
   }
 });
-
-// Inicialização
-rota();
 </script>
 </body>
 </html>
